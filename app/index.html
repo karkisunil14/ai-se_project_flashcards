@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+    <link rel="stylesheet" href="./assets/vendor/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script type="module" src="./assets/js/index.js"></script>
+  </head>
+  <body class="page">
+    <div class="page__main-content">
+      <header>
+        <div class="header__title">
+          <h1 class="header__link">
+            <a href="#home">Flash Cards</a>
+          </h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+              <a class="nav__links" href="#home">My Decks</a>
+            </li>
+
+            <!-- Optional Carousel Link -->
+
+            <li>
+              <a class="nav__link" href="#about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="carousel">
+          <h2 class="carousel__title">1/10 &middot; Basic HTML Tags</h2>
+
+          <div class="carousel__container">
+            <button
+              type="button"
+              aria-label="previous"
+              class="carousel__btn carousel__btn_type_left carousel__btn_disabled"
+              disabled
+            ></button>
+
+            <div class="carousel__card">
+              <p class="carousel__card-text">&lt;body&gt;&lt;/body&gt;</p>
+            </div>
+
+            <button
+              type="button"
+              aria-label="next"
+              class="carousel__btn carousel__btn_type_right"
+            ></button>
+          </div>
+          <button
+            type="button"
+            aria-label="flip"
+            class="carousel__btn carousel__btn_type_flip"
+          ></button>
+        </section>
+        <div id="home" class="decks">
+          <h1 class="decks__title">My Decks</h1>
+
+          <div class="decks__list">
+            <template id="deck-template">
+              <div class="deck deck_color_green">
+                <a class="deck__link" href="#"></a>
+                <h2 class="deck__title"></h2>
+
+                <div class="deck__row">
+                  <div class="deck__count"></div>
+
+                  <div class="deck__delete-btn">
+                    <img src="./assets/images/delete.svg" alt="delete" />
+                  </div>
+                </div>
+              </div>
+            </template>
+
+            <div class="decks__new-deck-btn">+ New Deck</div>
+          </div>
+        </div>
+      </main>
+
+      <!-- NOT FOUND VIEW -->
+      <section id="not-found" class="not-found">
+        <h2 class="not-found__status-code">404</h2>
+
+        <p class="not-found__text">Sorry, nothing found!</p>
+      </section>
+
+      <footer>
+        <p class="footer__text">&copy; 2026 Sunil Karki</p>
+      </footer>
+    </div>
+  </body>
+</html>
